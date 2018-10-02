@@ -20,6 +20,34 @@ namespace AccessModifiersInCSharpWithExample
 
     }
 
+    class A
+    {
+        private string privateX = "privateX";
+        public string publicX = "publicX";
+        internal string internalX = "internalX";
+        protected string protectedX = "protectedX";
+        protected internal string protectedInternalX = "protectedInternalX";
+
+    }
+
+    class B : A 
+    {
+
+
+        void printFun()
+        {
+            Console.WriteLine(base.publicX);
+            Console.WriteLine(base.internalX);
+            Console.WriteLine(base.protectedX);
+            Console.WriteLine(base.protectedInternalX);
+        }
+        
+
+
+
+    }
+
+
 
     class Program
     {
